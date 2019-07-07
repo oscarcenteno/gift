@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardView when project has one or more cycle snaps should render dashboard with two cycle snaps 1`] = `
+<DashboardWithCycleSnaps
+  elements={
+    Object {
+      "addCycleSnapLayer": undefined,
+      "addIncidentsReportLayer": undefined,
+      "addReleaseSnapLayer": undefined,
+      "failureNotification": undefined,
+      "successNotification": undefined,
+    }
+  }
+  viewModel={
+    Object {
+      "addCycleSnap": false,
+      "dashboardCallbacks": Object {
+        "onAddCycleSnapSubmit": [Function],
+        "onClose": [Function],
+        "onRequestAddCycleSnap": [Function],
+      },
+      "errorMessage": "",
+      "failureNotificationOnAdd": undefined,
+      "project": Object {
+        "cycleSnaps": Array [
+          Object {
+            "achievedPoints": 2,
+            "cycleSnapName": "5",
+            "daysSinceLastRelease": "15",
+            "endDate": "2017-03-17",
+            "lastReleaseDate": "2017-03-02",
+            "lastReleaseName": "Second Update",
+            "mood": "No data",
+            "relatedIncidents": "7",
+            "startDate": "2017-03-16",
+            "tac": "200%",
+            "targetedPoints": 1,
+            "teamCapacity": 0,
+            "wasteDays": 0,
+            "wastePercentage": "No data",
+          },
+          Object {
+            "achievedPoints": 100,
+            "cycleSnapName": "Sprint #4",
+            "daysSinceLastRelease": "13",
+            "endDate": "2017-03-15",
+            "lastReleaseDate": "2017-03-02",
+            "lastReleaseName": "Second Update",
+            "mood": "No data",
+            "relatedIncidents": "6",
+            "startDate": "2017-03-01",
+            "tac": "100%",
+            "targetedPoints": 100,
+            "teamCapacity": 0,
+            "wasteDays": 0,
+            "wastePercentage": "No data",
+          },
+          Object {
+            "achievedPoints": 68,
+            "cycleSnapName": "Sprint #3",
+            "daysSinceLastRelease": "21",
+            "endDate": "2017-02-28",
+            "lastReleaseDate": "2017-02-07",
+            "lastReleaseName": "First Version",
+            "mood": "2.50",
+            "relatedIncidents": "6",
+            "startDate": "2017-02-18",
+            "tac": "97%",
+            "targetedPoints": 70,
+            "teamCapacity": 99,
+            "wasteDays": 0,
+            "wastePercentage": "0.0%",
+          },
+          Object {
+            "achievedPoints": 55,
+            "cycleSnapName": "Sprint #2",
+            "daysSinceLastRelease": "7",
+            "endDate": "2017-02-14",
+            "lastReleaseDate": "2017-02-07",
+            "lastReleaseName": "First Version",
+            "mood": "3.00",
+            "relatedIncidents": "5",
+            "startDate": "2017-02-01",
+            "tac": "91%",
+            "targetedPoints": 60,
+            "teamCapacity": 99,
+            "wasteDays": 5.67,
+            "wastePercentage": "5.7%",
+          },
+          Object {
+            "achievedPoints": 0,
+            "cycleSnapName": "Sprint #1",
+            "daysSinceLastRelease": "5",
+            "endDate": "2017-01-30",
+            "lastReleaseDate": "No releases yet",
+            "lastReleaseName": "No releases yet",
+            "mood": "3.00",
+            "relatedIncidents": "No releases yet",
+            "startDate": "2017-01-25",
+            "tac": "No Data",
+            "targetedPoints": 0,
+            "teamCapacity": 100,
+            "wasteDays": 5,
+            "wastePercentage": "5.0%",
+          },
+        ],
+        "name": "Exceptional Project",
+      },
+      "projectId": "7",
+      "successNotificationOnAdd": undefined,
+    }
+  }
+/>
+`;

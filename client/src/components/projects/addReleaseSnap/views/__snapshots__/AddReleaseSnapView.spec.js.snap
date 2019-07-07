@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddReleaseSnapView should render the correct data values and validation errors 1`] = `
+<Layer
+  align="center"
+  closer={true}
+  onClose={[Function]}
+>
+  <Box
+    announce={false}
+    direction="column"
+    focusable={true}
+    pad={
+      Object {
+        "horizontal": "small",
+        "vertical": "large",
+      }
+    }
+    responsive={true}
+    tag="div"
+  >
+    <Heading
+      tag="h1"
+    >
+      Add a release snap
+    </Heading>
+    <h2>
+      Project: 
+      Exceptional Project
+    </h2>
+    <Form
+      compact={false}
+      fill={false}
+      pad="none"
+    >
+      <FormFields>
+        <fieldset>
+          <FormField
+            error="error releaseName"
+            htmlFor="releaseNameInput"
+            label="Release name or id"
+            size="medium"
+            strong={false}
+          >
+            <TextInput
+              id="releaseNameInput"
+              onDOMChange={[Function]}
+              value="Version 4"
+            />
+          </FormField>
+          <FormField
+            error="error startDate"
+            htmlFor="releaseDate"
+            label="Date"
+            size="medium"
+            strong={false}
+          >
+            <DateTime
+              format="YYYY-MM-DD"
+              id="releaseDate"
+              onChange={[Function]}
+              step={1}
+              value="2017-01-02"
+            />
+          </FormField>
+        </fieldset>
+      </FormFields>
+      <Footer
+        align="center"
+        direction="row"
+        pad={
+          Object {
+            "vertical": "medium",
+          }
+        }
+        responsive={false}
+      >
+        <Box
+          announce={false}
+          direction="column"
+          focusable={true}
+          pad="none"
+          responsive={true}
+          tag="div"
+        >
+          <Button
+            label="Add"
+            method="push"
+            onClick={[Function]}
+            primary={true}
+            type="submit"
+          />
+        </Box>
+        <Box
+          announce={false}
+          direction="column"
+          focusable={true}
+          pad={
+            Object {
+              "horizontal": "small",
+            }
+          }
+          responsive={true}
+          tag="div"
+        >
+          <Button
+            label="Cancel"
+            method="push"
+            onClick={[Function]}
+            secondary={true}
+            type="button"
+          />
+        </Box>
+      </Footer>
+    </Form>
+  </Box>
+</Layer>
+`;

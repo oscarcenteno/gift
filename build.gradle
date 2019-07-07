@@ -1,0 +1,19 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = "4.0.1"
+}
+
+apply plugin: "java"
+
+task doServerBuild (dependsOn: ':server:build'){}
+task doClientBuild (dependsOn: ':client:build'){}
+task doDatabaseValidation (dependsOn: ':database:validateDatabaseMigrationsInMemory'){}
+
+task cibuild (dependsOn: [
+        doDatabaseValidation,
+        doServerBuild
+]) {
+    doServerBuild.dependsOn(doClientBuild)
+    doClientBuild.dependsOn(doDatabaseValidation)
+}
+
+task doDocker (dependsOn: ':server:buildDocker'){}

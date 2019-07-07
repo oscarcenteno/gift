@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardView when project does not have cycle snaps should render dashboard with no cycle snaps 1`] = `
+<DashboardWithNoCycleSnaps
+  elements={
+    Object {
+      "addCycleSnapLayer": undefined,
+      "addIncidentsReportLayer": undefined,
+      "addReleaseSnapLayer": undefined,
+      "failureNotification": undefined,
+      "successNotification": undefined,
+    }
+  }
+  viewModel={
+    Object {
+      "addCycleSnap": false,
+      "dashboardCallbacks": Object {
+        "onAddCycleSnapSubmit": [Function],
+        "onClose": [Function],
+        "onRequestAddCycleSnap": [Function],
+      },
+      "errorMessage": "",
+      "failureNotificationOnAdd": undefined,
+      "project": Object {
+        "cycleSnaps": Array [],
+        "name": "BAAM",
+      },
+      "projectId": "2",
+      "successNotificationOnAdd": undefined,
+    }
+  }
+/>
+`;

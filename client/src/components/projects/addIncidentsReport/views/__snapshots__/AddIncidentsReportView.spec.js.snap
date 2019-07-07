@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportIncidentsView.spec should render the correct data values and validation errors 1`] = `
+<Layer
+  align="center"
+  closer={true}
+  onClose={[Function]}
+>
+  <Box
+    announce={false}
+    direction="column"
+    focusable={true}
+    pad={
+      Object {
+        "horizontal": "small",
+        "vertical": "large",
+      }
+    }
+    responsive={true}
+    tag="div"
+  >
+    <Heading
+      tag="h1"
+    >
+      Add an incidents report
+    </Heading>
+    <Form
+      compact={false}
+      fill={false}
+      pad="none"
+    >
+      <FormFields>
+        <fieldset>
+          <FormField
+            error="error reportDate"
+            htmlFor="reportDateInput"
+            label="Report date"
+            size="medium"
+            strong={false}
+          >
+            <DateTime
+              format="YYYY-MM-DD"
+              id="reportDateInput"
+              onChange={[Function]}
+              step={1}
+              value="2017-01-02"
+            />
+          </FormField>
+          <FormField
+            error="error totalIncidents"
+            htmlFor="totalIncidentsInputId"
+            label="Total incidents"
+            size="medium"
+            strong={false}
+          >
+            <NumberInput
+              id="totalIncidentsInputId"
+              max={100}
+              min={1}
+              onChange={[Function]}
+              step={1}
+              value={2}
+            />
+          </FormField>
+          <FormField
+            error="error rationale"
+            htmlFor="rationaleInputId"
+            label="Rationale"
+            size="medium"
+            strong={false}
+          >
+            <textarea
+              id="rationaleInputId"
+              onChange={[Function]}
+              rows={4}
+              value="Some issues"
+            />
+          </FormField>
+        </fieldset>
+      </FormFields>
+      <Footer
+        align="center"
+        direction="row"
+        pad={
+          Object {
+            "vertical": "medium",
+          }
+        }
+        responsive={false}
+      >
+        <Box
+          announce={false}
+          direction="column"
+          focusable={true}
+          pad="none"
+          responsive={true}
+          tag="div"
+        >
+          <Button
+            label="Add"
+            method="push"
+            onClick={[Function]}
+            primary={true}
+            type="submit"
+          />
+        </Box>
+        <Box
+          announce={false}
+          direction="column"
+          focusable={true}
+          pad={
+            Object {
+              "horizontal": "small",
+            }
+          }
+          responsive={true}
+          tag="div"
+        >
+          <Button
+            label="Cancel"
+            method="push"
+            onClick={[Function]}
+            secondary={true}
+            type="button"
+          />
+        </Box>
+      </Footer>
+    </Form>
+  </Box>
+</Layer>
+`;

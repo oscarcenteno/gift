@@ -1,0 +1,53 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath 'com.h2database:h2:1.4.191'
+    }
+}
+
+plugins {
+    id "org.flywaydb.flyway" version "4.2.0"
+}
+
+flyway {
+    url = "jdbc:mysql://localhost:3306/gift?useSSL=false"
+    user = "root"
+    password = "root"
+    locations = ["filesystem:db", "filesystem:database/db"]
+    sqlMigrationPrefix = "v"
+}
+
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Database
+    compile("mysql:mysql-connector-java")
+}
+
+// This task applies all the migrations to an in-memory database
+// This way we can check migrations in the CI Server
+// as part of the CI build.
+task validateDatabaseMigrationsInMemory(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
+    extension = new org.flywaydb.gradle.FlywayExtension()
+    extension.driver = "org.h2.Driver"
+    extension.schemas = ['gift']
+    extension.locations = ['filesystem:database/db']
+    extension.sqlMigrationPrefix = "v"
+    extension.url = 'jdbc:h2:mem:gift'
+    extension.user = 'sa'
+}
+

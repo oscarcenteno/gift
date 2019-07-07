@@ -1,0 +1,109 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.4.RELEASE'
+        hibernateVersion = '5.2.10.Final'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath('se.transmode.gradle:gradle-docker:1.2')
+    }
+}
+
+plugins {
+    id 'io.franzbecker.gradle-lombok' version '1.8'
+    id 'org.springframework.boot' version '1.5.4.RELEASE'
+    id "com.heroku.sdk.heroku-gradle" version "0.2.0"
+}
+
+apply plugin: 'docker'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'groovy'
+
+group = 'com.gft'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'GiFtApplication',
+                'Implementation-Version': version,
+                'Main-Class': 'com.gft.GiFT.GiFtApplication'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    // Database
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile("org.hibernate:hibernate-core:${hibernateVersion}")
+    compile("org.hibernate:hibernate-entitymanager:${hibernateVersion}")
+    compile("mysql:mysql-connector-java")
+
+    // Reduce boilerplate code
+    compileOnly('org.projectlombok:lombok')
+
+    // https://mvnrepository.com/artifact/joda-time/joda-time
+    compile group: 'joda-time', name: 'joda-time', version: '2.3'
+
+    // Mandatory dependencies for using Spock
+    compile("org.codehaus.groovy:groovy-all:2.4.10")
+    testCompile("org.spockframework:spock-core:1.1-groovy-2.4-rc-2")
+
+    // Test
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile("org.spockframework:spock-spring:1.1-groovy-2.4-rc-2")
+    testCompile 'cglib:cglib-nodep:2.2'       // For mocking classes
+
+    // JUnit
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile "org.mockito:mockito-core:1.10.19"
+
+
+}
+
+test {
+    dependsOn 'cleanTest'
+
+    //Default to unit
+    exclude '**/*IntegrationTests.*'
+}
+
+// Usage: gradlew integrationTest
+task integrationTest(type: Test, description: 'Runs the integration tests', group: 'Verification') {
+    dependsOn 'cleanIntegrationTest'
+    include '**/*IntegrationTests*'
+    systemProperties System.properties
+}
+
+task buildDocker(type: Docker, dependsOn: build) {
+    applicationName = 'gift'
+    baseImage = 'java:8'
+    push = false // Would push to a Docker Hub account
+    addFile {
+        from jar
+        rename {'app.jar'}
+    }
+    entryPoint(['java', '-Djava.security.egd=file:/dev/./urandom', '-Dspring.profiles.active=default,container', '-jar', '/app.jar'])
+}
+
+heroku {
+    appName = 'gift-demo'
+    includes = ['c:/code/GiFT-App/server/build/libs/server-0.0.1-SNAPSHOT.jar']
+    includeBuildDir = false
+    processTypes(
+            web: 'java $JAVA_OPTS -Dserver.port=$PORT -Dspring.profiles.active=default,prod -jar server-0.0.1-SNAPSHOT.jar'
+    )
+}

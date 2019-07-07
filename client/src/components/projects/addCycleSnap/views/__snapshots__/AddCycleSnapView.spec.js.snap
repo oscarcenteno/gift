@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddCycleSnapView should render the correct data values and validation errors 1`] = `
+<Layer
+  align="center"
+  closer={true}
+  onClose={[Function]}
+>
+  <Box
+    announce={false}
+    direction="column"
+    focusable={true}
+    pad={
+      Object {
+        "horizontal": "small",
+        "vertical": "large",
+      }
+    }
+    responsive={true}
+    tag="div"
+  >
+    <Heading
+      tag="h1"
+    >
+      Add cycle snap
+    </Heading>
+    <h2>
+      Project: 
+      Exceptional Project
+    </h2>
+    <Form
+      compact={false}
+      fill={false}
+      pad="none"
+    >
+      <FormFields>
+        <fieldset>
+          <FormField
+            error="error name"
+            htmlFor="cycleNameInput"
+            label="Name"
+            size="medium"
+            strong={false}
+          >
+            <TextInput
+              id="cycleNameInput"
+              onDOMChange={[Function]}
+              value="1"
+            />
+          </FormField>
+          <FormField
+            error="error startDate"
+            htmlFor="cycleStartDate"
+            label="Start Date"
+            size="medium"
+            strong={false}
+          >
+            <DateTime
+              format="YYYY-MM-DD"
+              id="cycleStartDate"
+              onChange={[Function]}
+              step={1}
+              value="2017-01-02"
+            />
+          </FormField>
+          <FormField
+            error="error endDate"
+            htmlFor="cycleEndDate"
+            label="End Date"
+            size="medium"
+            strong={false}
+          >
+            <DateTime
+              format="YYYY-MM-DD"
+              id="cycleEndDate"
+              onChange={[Function]}
+              step={1}
+              value="2017-01-15"
+            />
+          </FormField>
+          <FormField
+            error="error targetedPoints"
+            htmlFor="targetedPointsId"
+            label="Targeted points"
+            size="medium"
+            strong={false}
+          >
+            <NumberInput
+              id="targetedPointsId"
+              min={0}
+              onChange={[Function]}
+              step={1}
+              value="8"
+            />
+          </FormField>
+          <FormField
+            error="error achievedPoints"
+            htmlFor="achievedPointsId"
+            label="Achieved points"
+            size="medium"
+            strong={false}
+          >
+            <NumberInput
+              id="achievedPoints"
+              min={0}
+              onChange={[Function]}
+              step={1}
+              value="13"
+            />
+          </FormField>
+          <FormField
+            size="medium"
+            strong={false}
+          >
+            <CheckBox
+              defaultChecked={true}
+              label="Is mood available?"
+              onChange={undefined}
+              reverse={true}
+              toggle={true}
+            />
+          </FormField>
+          <FormField
+            size="medium"
+            strong={false}
+          >
+            <CheckBox
+              defaultChecked={true}
+              label="Is waste available?"
+              onChange={undefined}
+              reverse={true}
+              toggle={true}
+            />
+          </FormField>
+        </fieldset>
+      </FormFields>
+      <Footer
+        align="center"
+        direction="row"
+        pad={
+          Object {
+            "vertical": "medium",
+          }
+        }
+        responsive={false}
+      >
+        <Box
+          announce={false}
+          direction="column"
+          focusable={true}
+          pad="none"
+          responsive={true}
+          tag="div"
+        >
+          <Button
+            label="Add"
+            method="push"
+            onClick={[Function]}
+            primary={true}
+            type="submit"
+          />
+        </Box>
+        <Box
+          announce={false}
+          direction="column"
+          focusable={true}
+          pad={
+            Object {
+              "horizontal": "small",
+            }
+          }
+          responsive={true}
+          tag="div"
+        >
+          <Button
+            label="Cancel"
+            method="push"
+            onClick={[Function]}
+            secondary={true}
+            type="button"
+          />
+        </Box>
+      </Footer>
+    </Form>
+  </Box>
+</Layer>
+`;
