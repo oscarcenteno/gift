@@ -2,17 +2,17 @@ import validation from './validation';
 
 describe('Validation for all fields should validate', () => {
 
-  let state
+  let state;
   beforeEach(() => {
     state = {
       releaseName: '1',
       releaseDate: '2016-11-15'
     };
-  })
+  });
 
   it('Valid scenario', () => {
     let actual = validation.validate(state);
-    let expected = {"releaseName": undefined, "releaseDate": undefined};
+    let expected = {'releaseName': undefined, 'releaseDate': undefined};
 
     expect(actual).toEqual(expected);
   });

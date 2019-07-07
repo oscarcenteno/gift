@@ -23,7 +23,7 @@ export default class AddCycleSnapController extends React.Component {
       onWasteDaysChange: this.changeWasteDays(),
       onClick: this.onSubmit,
       onClose: this.props.onClose
-    }
+    };
 
     this.state = presenters.getInitial(props, formCallbacks);
   }
@@ -37,21 +37,21 @@ export default class AddCycleSnapController extends React.Component {
 
   changeStartDate(index) {
     return (newValue) => {
-      const newViewModel = presenters.getOnStartDateChange(newValue, this.state)
+      const newViewModel = presenters.getOnStartDateChange(newValue, this.state);
       this.setState(newViewModel);
-    }
+    };
   }
 
   changeEndDate(index) {
     return (newValue) => {
       const newViewModel = presenters.getOnEndDateChange(newValue, this.state);
       this.setState(newViewModel);
-    }
+    };
   }
 
   changeTargetedPoints(index) {
     return (event) => {
-      const newViewModel = presenters.getOnTargetedPointsChange(event, this.state)
+      const newViewModel = presenters.getOnTargetedPointsChange(event, this.state);
       this.setState(newViewModel);
     };
   }
@@ -88,7 +88,7 @@ export default class AddCycleSnapController extends React.Component {
     return (event) => {
       const newViewModel = presenters.getOnTeamCapacityChange(event, this.state);
       this.setState(newViewModel);
-    }
+    };
   }
 
   changeWasteDays() {
@@ -109,7 +109,7 @@ export default class AddCycleSnapController extends React.Component {
   }
 
   render() {
-    return (<AddCycleSnapView viewModel={this.state} />)
+    return (<AddCycleSnapView viewModel={this.state} />);
   }
 }
 
@@ -118,4 +118,4 @@ AddCycleSnapController.PropTypes = {
   onSubmit: PropTypes.func.isRequired,
   projectId: PropTypes.number,
   projectName: PropTypes.string
-}
+};

@@ -36,7 +36,7 @@ describe('DashboardView when project does not have cycle snaps', () => {
 
     function getProjectWithNoCycleSnaps() {
         // Test data from http://localhost:8080/api/v1/projects/2/dashboard 
-        return { "name": "BAAM", "cycleSnaps": [] };
+        return { 'name': 'BAAM', 'cycleSnaps': [] };
     }
 
 });

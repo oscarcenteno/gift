@@ -25,6 +25,8 @@ test('Every field accepts valid values.', async t => {
     .typeText(page.reportDateInput, '2017-08-12')
     .expect(page.reportDateInput.value).eql('2017-08-12');
   await t
+    .click(page.totalIncidentsInput)
+    .pressKey('ctrl+a delete')
     .typeText(page.totalIncidentsInput, '10', {replace: true})
     .expect(page.totalIncidentsInput.value).eql('10');
   await t

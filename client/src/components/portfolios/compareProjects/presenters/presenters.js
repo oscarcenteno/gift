@@ -7,7 +7,7 @@ const presenters = {
         lastSnaps: []
       },
       errorMessage: ''
-    }
+    };
   },
 
   getOnSuccessLoadingComparison(response) {
@@ -26,7 +26,7 @@ const presenters = {
   getInvalidPortfolioIdError() {
     return {
       comparison: undefined,
-      errorMessage: "We are sorry, but your asked with an invalid portfolio id."
+      errorMessage: 'We are sorry, but your asked with an invalid portfolio id.'
     };
   },
 
@@ -47,6 +47,6 @@ const presenters = {
     }
   }
 
-}
+};
 
 export default presenters;

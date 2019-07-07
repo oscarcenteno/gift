@@ -2,9 +2,9 @@ import presenters from './presenters';
 
 describe('presenters.getOnTeamCapacityChange', () => {
 
-  let event
-  let currentViewModel
-  let viewModel
+  let event;
+  let currentViewModel;
+  let viewModel;
   beforeEach(() => {
     event = {target: {valueAsNumber: 2.349}};
 

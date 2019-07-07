@@ -13,18 +13,18 @@ export const constants = {
     const port = location.port;
 
     let api = undefined;
-    switch (host + ":" + port) {
-      case "localhost:4090":
-        api = "http://localhost:8080/api/v1"; // local dev
+    switch (host + ':' + port) {
+      case 'localhost:4090':
+        api = 'http://localhost:8080/api/v1'; // local dev
         break;
-      case "criprj:11010":
-        api = "http://criprj:11010/api/v1"; // testing
+      case 'criprj:11010':
+        api = 'http://criprj:11010/api/v1'; // testing
         break;
       default:
-        api = "http://gift-demo.herokuapp.com/api/v1"; // cloud
+        api = 'http://gift-demo.herokuapp.com/api/v1'; // cloud
     }
     return api;
   }
-}
+};
 
 export default constants;

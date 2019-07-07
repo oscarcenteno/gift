@@ -2,10 +2,10 @@ import presenters from '../presenters';
 
 describe('View model when closing the Add Cycle Snap Form', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     viewModel = presenters.getForClosingForms();
-  })
+  });
 
   it('should show no error message', () => {
     const actual = viewModel.errorMessage;

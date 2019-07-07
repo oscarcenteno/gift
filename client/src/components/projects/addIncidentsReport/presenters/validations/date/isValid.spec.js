@@ -16,7 +16,7 @@ describe('Date validations should validate', () => {
   });
 
   it('A number', () => {
-    let actual = validations.isValid(2016-12-32);
+    let actual = validations.isValid(2016 - 12 - 32);
     let expected = false;
 
      expect(actual).toEqual(expected);

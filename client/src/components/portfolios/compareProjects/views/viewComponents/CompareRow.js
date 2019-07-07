@@ -12,6 +12,6 @@ const CompareRow = ({lastSnap, index}) =>
     <td key='incidents'>{lastSnap.relatedIncidents}</td>
     <td key='waste'>{lastSnap.waste}</td>
     <td key='mood'>{lastSnap.mood}</td>
-  </TableRow>
+  </TableRow>;
 
 export default CompareRow;

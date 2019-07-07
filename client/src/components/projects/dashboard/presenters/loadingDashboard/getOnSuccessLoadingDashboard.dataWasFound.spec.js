@@ -2,11 +2,11 @@ import presenters from '../presenters';
 
 describe('View model when loading the dashboard and data was found', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     let response = { data: {name:'name', cycleSnaps: []} };
     viewModel = presenters.getOnSuccessLoadingDashboard(response);
-  })
+  });
 
   it('should return the data', () => {
     const actual = viewModel.project;

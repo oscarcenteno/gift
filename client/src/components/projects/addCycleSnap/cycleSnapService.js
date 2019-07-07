@@ -7,6 +7,6 @@ const cycleSnapService = {
       .then((response) => onSuccess(response))
       .catch((error) => onError(error));
   }
-}
+};
 
 export default cycleSnapService;

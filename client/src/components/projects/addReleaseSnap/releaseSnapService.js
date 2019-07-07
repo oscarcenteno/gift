@@ -6,6 +6,6 @@ const releaseSnapService = {
       .then((response) => onSuccess(response))
       .catch((error) => onError(error));
   }
-}
+};
 
 export default releaseSnapService;

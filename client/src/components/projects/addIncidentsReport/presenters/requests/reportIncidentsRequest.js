@@ -5,8 +5,8 @@ const reportIncidentsRequest = {
       reportDate: viewModel.reportDate,
       rationale: viewModel.rationale,
       totalIncidents: viewModel.totalIncidents
-    }
+    };
   }
-}
+};
 
 export default reportIncidentsRequest;

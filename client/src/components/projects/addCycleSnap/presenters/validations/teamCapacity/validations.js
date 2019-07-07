@@ -17,6 +17,6 @@ const validations = {
 
     return error;
   }
-}
+};
 
 export default validations;

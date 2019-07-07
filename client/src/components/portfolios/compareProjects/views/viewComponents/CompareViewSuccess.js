@@ -10,6 +10,6 @@ const CompareViewSuccess = ({viewModel}) => {
   else {
     return (<CompareWithNoProjects viewModel={viewModel}/>);
   }
-}
+};
 
 export default CompareViewSuccess;

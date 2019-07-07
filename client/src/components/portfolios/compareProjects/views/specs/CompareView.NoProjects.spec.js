@@ -22,7 +22,7 @@ describe('CompareView when portfolio does not have projects', () => {
 
   function getPortfolioWithNoProjects() {
     // Test data from http://http://localhost:8080/api/v1/portfolios/5/comparison
-    return {"portfolioName": "Portfolio With No Projects", "lastSnaps": []};
+    return {'portfolioName': 'Portfolio With No Projects', 'lastSnaps': []};
   }
 
 });

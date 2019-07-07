@@ -46,7 +46,7 @@ const AddIncidentsReportView = ({ viewModel }) => {
             </fieldset>
           </FormFields>
 
-          <Footer pad={{ "vertical": "medium" }}>
+          <Footer pad={{ 'vertical': 'medium' }}>
             <Box>
               <Button label='Add' type='submit' primary={true} onClick={formCallbacks.onClick} />
             </Box>

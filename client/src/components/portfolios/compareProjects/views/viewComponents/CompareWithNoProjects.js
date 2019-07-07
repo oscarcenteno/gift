@@ -13,6 +13,6 @@ const CompareWithNoProjects = ({viewModel}) => {
       <span>This Portfolio has no projects.</span>
     </h3>
   </Box>);
-}
+};
 
 export default CompareWithNoProjects;

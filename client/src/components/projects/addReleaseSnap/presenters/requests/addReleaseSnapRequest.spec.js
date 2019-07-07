@@ -2,7 +2,7 @@ import addReleaseSnapRequest from './addReleaseSnapRequest';
 
 describe('Add Release Snap request', () => {
 
-  let request
+  let request;
   beforeEach(() => {
     let viewModel = {
       projectId: 999,
@@ -10,7 +10,7 @@ describe('Add Release Snap request', () => {
       releaseDate: '2016-06-08'
     };
     request = addReleaseSnapRequest.get(viewModel);
-  })
+  });
 
   it('should contain the project id', () => {
     const actual = request.projectId;

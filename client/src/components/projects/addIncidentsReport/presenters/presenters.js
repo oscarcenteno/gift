@@ -26,7 +26,7 @@ const presenters = {
       submitRequest(request);
     }
     else {
-      const newViewModel = { errors: errors }
+      const newViewModel = { errors: errors };
       updateViewModel(newViewModel);
     }
   },

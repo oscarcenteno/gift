@@ -2,7 +2,7 @@ import presenters from '../presenters';
 
 describe('View model when loading the Compare and data was found', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     let response = {
       data: {
@@ -20,7 +20,7 @@ describe('View model when loading the Compare and data was found', () => {
       }
     };
     viewModel = presenters.getOnSuccessLoadingComparison(response);
-  })
+  });
 
   it('should return the data for the compare', () => {
     const actual = viewModel;

@@ -15,7 +15,7 @@ export default function AppHeader (props) {
         responsive={false} justify="start" align="center" 
         pad={{horizontal: 'medium'}} flex="grow">
         <Title>
-        <Anchor path={"/"}>
+        <Anchor path={'/'}>
           GiFT
         </Anchor>
       </Title>
@@ -29,4 +29,4 @@ export default function AppHeader (props) {
       </Box>
     </Header>
   );
-};
+}

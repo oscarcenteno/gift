@@ -2,10 +2,10 @@ import presenters from '../presenters';
 
 describe('View model after adding a cycle snap', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     viewModel = presenters.getSuccessOnAddingACycleSnap();
-  })
+  });
 
   it('should show no error message', () => {
     const actual = viewModel.errorMessage;

@@ -20,6 +20,6 @@ const endDatevalidations = {
     startPrecedesEndDate(startDate, endDate) {
         return new Date(endDate) > new Date(startDate); // true if endDate is later
     }
-}
+};
 
 export default endDatevalidations;

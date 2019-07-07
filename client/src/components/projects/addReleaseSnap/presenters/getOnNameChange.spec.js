@@ -2,9 +2,9 @@ import presenters from './presenters';
 
 describe('presenters.getOnNameChange', () => {
 
-  let eventWithEmptyValue
-  let eventWithValidValue
-  let currentViewModel
+  let eventWithEmptyValue;
+  let eventWithValidValue;
+  let currentViewModel;
 
   beforeEach(() => {
     eventWithEmptyValue = {target: {value: '          '}};
@@ -14,7 +14,7 @@ describe('presenters.getOnNameChange', () => {
       errors: {releaseName: undefined},
       releaseName: undefined
     };
-  })
+  });
 
   it('Should set the new value', () => {
     const viewModel = presenters.getOnNameChange(eventWithValidValue, currentViewModel);

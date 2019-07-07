@@ -2,9 +2,9 @@ import presenters from './presenters';
 
 describe('presenters.processSubmit', () => {
 
-  let currentViewModel
-  let updateViewModelCallBack
-  let submitRequestCallBack
+  let currentViewModel;
+  let updateViewModelCallBack;
+  let submitRequestCallBack;
   beforeEach(() => {
     currentViewModel = {
       projectId: 999,
@@ -16,7 +16,7 @@ describe('presenters.processSubmit', () => {
     };
     updateViewModelCallBack = jest.fn();
     submitRequestCallBack = jest.fn();
-  })
+  });
 
   it('should submit the correct request when there are no validation errors', () => {
     presenters.processSubmit(currentViewModel, updateViewModelCallBack, submitRequestCallBack);

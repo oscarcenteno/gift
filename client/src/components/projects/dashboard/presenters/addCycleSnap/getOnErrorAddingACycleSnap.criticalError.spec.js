@@ -2,11 +2,11 @@ import presenters from '../presenters';
 
 describe('View model when there is a critical error adding a cycle snap', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     let criticalError = { message: 'Network Error' };
     viewModel = presenters.getOnErrorAddingACycleSnap(criticalError);
-  })
+  });
 
   it('should show critical error message', () => {
     const actual = viewModel.errorMessage;

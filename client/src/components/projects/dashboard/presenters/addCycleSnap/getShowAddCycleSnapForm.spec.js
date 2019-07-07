@@ -2,10 +2,10 @@ import presenters from '../presenters';
 
 describe('View model when showing the Add Cycle Snap Form', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     viewModel = presenters.getShowAddCycleSnapForm();
-  })
+  });
 
   it('should show no error message', () => {
     const actual = viewModel.errorMessage;

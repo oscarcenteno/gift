@@ -2,7 +2,7 @@ import presenters from './presenters';
 
 describe('presenters.getOnTargetedPointsChange', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     const eventWithInvalidValue = {target: {valueAsNumber: -1}};
 
@@ -12,7 +12,7 @@ describe('presenters.getOnTargetedPointsChange', () => {
     };
     viewModel = presenters.getOnTargetedPointsChange(eventWithInvalidValue, currentViewModel);
 
-  })
+  });
 
   it('Should set the new value', () => {
     const actual = viewModel.targetedPoints;

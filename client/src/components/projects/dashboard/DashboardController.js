@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import presenters from "./presenters/presenters";
+import presenters from './presenters/presenters';
 import DashboardView from './views/DashboardView';
 import dashboardService from './dashboardService';
 
@@ -40,7 +40,7 @@ export default class DashboardController extends React.Component {
       onAddIncidentsReportSubmit: this.onAddIncidentsReportSubmit,
 
       onClose: this.onFormCancel
-    }
+    };
 
     this.state = presenters.getInitial(props, dashboardCallbacks);
   }
@@ -50,7 +50,7 @@ export default class DashboardController extends React.Component {
   }
 
   loadDashboard() {
-    const {projectId} = this.state
+    const {projectId} = this.state;
 
     if (isNaN(projectId) || this.isInteger(projectId)) {
       const newViewModel = presenters.getInvalidProjectError();
@@ -136,6 +136,6 @@ export default class DashboardController extends React.Component {
   render() {
     const viewModel = this.state;
 
-    return (<DashboardView viewModel={viewModel}/>)
+    return (<DashboardView viewModel={viewModel}/>);
   }
 }

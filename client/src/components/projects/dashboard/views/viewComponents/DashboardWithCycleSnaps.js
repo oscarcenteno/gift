@@ -3,7 +3,7 @@ import Box from 'grommet/components/Box';
 import Heading from 'grommet/components/Heading';
 import Footer from 'grommet/components/Footer';
 import Button from 'grommet/components/Button';
-import CycleSnapsTable from './CycleSnapsTable'
+import CycleSnapsTable from './CycleSnapsTable';
 
 const DashboardWithCycleSnaps = ({ viewModel, elements }) => {
   const { dashboardCallbacks } = viewModel;
@@ -13,7 +13,7 @@ const DashboardWithCycleSnaps = ({ viewModel, elements }) => {
     <Heading>Dashboard: {name}</Heading>
     <Footer>
       <Box direction='row'
-        pad={{ "between": "medium" }}>
+        pad={{ 'between': 'medium' }}>
         <Button
           label='Add cycle snap'
           onClick={dashboardCallbacks.onRequestAddCycleSnap}
@@ -45,5 +45,5 @@ const DashboardWithCycleSnaps = ({ viewModel, elements }) => {
     {elements.failureNotification}
   </Box>
   );
-}
+};
 export default DashboardWithCycleSnaps;

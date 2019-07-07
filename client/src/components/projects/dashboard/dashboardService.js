@@ -6,5 +6,5 @@ const dashboardService = {
       .then((response) => onSuccessCallback(response))
       .catch((error) => onErrorCallback(error));
   }
-}
+};
 export default dashboardService;

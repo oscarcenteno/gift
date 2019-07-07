@@ -2,7 +2,7 @@ import addCycleSnapRequest from './addCycleSnapRequest';
 
 describe('Add cycle snap request', () => {
 
-  let request
+  let request;
   beforeEach(() => {
     let viewModel = {
       projectId: 999,
@@ -18,7 +18,7 @@ describe('Add cycle snap request', () => {
       wasteDays: 5.89,
     };
     request = addCycleSnapRequest.get(viewModel);
-  })
+  });
 
   it('should contain the project id', () => {
     const actual = request.projectId;

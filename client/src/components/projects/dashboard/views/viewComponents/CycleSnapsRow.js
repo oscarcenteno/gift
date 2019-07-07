@@ -16,6 +16,6 @@ const CycleSnapsRow = ({cycle, index}) =>
     <td key='wasteDays'>{cycle.wasteDays}</td>
     <td key='wastePercentage'>{cycle.wastePercentage}</td>
     <td key='mood'>{cycle.mood}</td>
-  </TableRow>
+  </TableRow>;
 
 export default CycleSnapsRow;

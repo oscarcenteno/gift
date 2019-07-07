@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
 import MasterPage from './components/masterPage/MasterPage';
 import NotFound from './components/masterPage/notFound/NotFound';
@@ -19,15 +19,15 @@ const store = configStore();
 render((
   <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path={"/"} component={MasterPage}>
+      <Route path={'/'} component={MasterPage}>
         <IndexRoute component={Portfolios}></IndexRoute>
-        <Route path={"portfolios"} component={Portfolios}></Route>
-        <Route path={"projects/:id"} component={ProjectList}></Route>
-        <Route path={"projects/:id/dashboard"} component={DashboardController}></Route>
-        <Route path={"portfolios/:id/comparison"} component={ComparisonController}></Route>
+        <Route path={'portfolios'} component={Portfolios}></Route>
+        <Route path={'projects/:id'} component={ProjectList}></Route>
+        <Route path={'projects/:id/dashboard'} component={DashboardController}></Route>
+        <Route path={'portfolios/:id/comparison'} component={ComparisonController}></Route>
         <Route path="*" component={NotFound} />
       </Route>
 
     </Router>
   </Provider>
-), document.getElementById('app'))
+), document.getElementById('app'));

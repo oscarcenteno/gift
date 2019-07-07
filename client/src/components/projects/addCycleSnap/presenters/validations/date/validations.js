@@ -1,6 +1,6 @@
 const validations = {
   isValid(text) {
-    let aDate = new Date(text + "T18:00");
+    let aDate = new Date(text + 'T18:00');
 
     // it is a date
     if (isNaN(aDate.getTime())) {  // d.valueOf() could also work
@@ -18,6 +18,6 @@ const validations = {
       }
     }
   }
-}
+};
 
 export default validations;

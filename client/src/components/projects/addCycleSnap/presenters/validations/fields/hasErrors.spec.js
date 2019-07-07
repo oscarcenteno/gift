@@ -2,16 +2,16 @@ import validation from './validation';
 
 describe('How to know if there is any error in the fields', () => {
 
-  let errors
+  let errors;
   beforeEach(() => {
     errors = {
-      "achievedPoints": undefined,
-      "endDate": undefined,
-      "name": undefined,
-      "startDate": undefined,
-      "targetedPoints": undefined
+      'achievedPoints': undefined,
+      'endDate': undefined,
+      'name': undefined,
+      'startDate': undefined,
+      'targetedPoints': undefined
     };
-  })
+  });
 
   it('No errors', () => {
     let actual = validation.hasErrors(errors);
@@ -21,7 +21,7 @@ describe('How to know if there is any error in the fields', () => {
   });
 
   it('Error in the name', () => {
-    errors.name = "Error";
+    errors.name = 'Error';
     let actual = validation.hasErrors(errors);
     let expected = true;
 
@@ -29,7 +29,7 @@ describe('How to know if there is any error in the fields', () => {
   });
 
   it('Error in the start date', () => {
-    errors.startDate = "Error";
+    errors.startDate = 'Error';
     let actual = validation.hasErrors(errors);
     let expected = true;
 
@@ -37,7 +37,7 @@ describe('How to know if there is any error in the fields', () => {
   });
 
   it('Error in the end date', () => {
-    errors.endDate = "Error";
+    errors.endDate = 'Error';
     let actual = validation.hasErrors(errors);
     let expected = true;
 
@@ -45,7 +45,7 @@ describe('How to know if there is any error in the fields', () => {
   });
 
   it('Error in the targeted points', () => {
-    errors.targetedPoints = "Error";
+    errors.targetedPoints = 'Error';
     let actual = validation.hasErrors(errors);
     let expected = true;
 
@@ -53,7 +53,7 @@ describe('How to know if there is any error in the fields', () => {
   });
 
   it('Error in the achieved points', () => {
-    errors.achievedPoints = "Error";
+    errors.achievedPoints = 'Error';
     let actual = validation.hasErrors(errors);
     let expected = true;
 

@@ -20,6 +20,6 @@ const CompareTable = ({viewModel}) => {
       </tbody>
     </Table>
   );
-}
+};
 
 export default CompareTable;

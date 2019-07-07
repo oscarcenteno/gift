@@ -2,7 +2,7 @@ import reportIncidentsRequest from './reportIncidentsRequest';
 
 describe('reportIncidentsRequest', () => {
 
-  let request
+  let request;
   beforeEach(() => {
     let viewModel = {
       projectId: 999,
@@ -11,7 +11,7 @@ describe('reportIncidentsRequest', () => {
       rationale: 'Some issues'
     };
     request = reportIncidentsRequest.get(viewModel);
-  })
+  });
 
   it('should contain the project id', () => {
     const actual = request.projectId;

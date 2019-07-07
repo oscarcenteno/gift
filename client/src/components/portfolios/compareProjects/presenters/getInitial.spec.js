@@ -2,14 +2,14 @@ import presenters from './presenters';
 
 describe('presenters.getInitial', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     let props = {
       params:
         {id: 1}
     };
     viewModel = presenters.getInitial(props);
-  })
+  });
 
   it('should contain the portfolio id', () => {
     const actual = viewModel.portfolioId;

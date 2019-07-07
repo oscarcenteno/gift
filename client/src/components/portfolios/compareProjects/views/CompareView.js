@@ -1,7 +1,7 @@
 import React from 'react';
-import CompareViewSuccess from "./viewComponents/CompareViewSuccess";
-import CompareWithCriticalError from "./viewComponents/CompareWithCriticalError";
-import LoadingCompareView from "./viewComponents/LoadingCompareView";
+import CompareViewSuccess from './viewComponents/CompareViewSuccess';
+import CompareWithCriticalError from './viewComponents/CompareWithCriticalError';
+import LoadingCompareView from './viewComponents/LoadingCompareView';
 
 const CompareView = ({viewModel}) => {
   const {errorMessage} = viewModel;
@@ -17,7 +17,7 @@ const CompareView = ({viewModel}) => {
       return (<LoadingCompareView/>);
     }
   }
-}
+};
 
 export default CompareView;
 

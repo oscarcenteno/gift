@@ -53,6 +53,6 @@ const validation = {
     else
       return false;
   }
-}
+};
 
 export default validation;

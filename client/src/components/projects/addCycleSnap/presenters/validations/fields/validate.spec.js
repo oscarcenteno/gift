@@ -2,7 +2,7 @@ import validation from './validation';
 
 describe('Validation for all fields should validate', () => {
 
-  let state
+  let state;
   beforeEach(() => {
     state = {
       cycleSnapName: '1',
@@ -16,11 +16,11 @@ describe('Validation for all fields should validate', () => {
       teamCapacity: 100,
       wasteDays: 5    
     };
-  })
+  });
 
   it('Valid scenario', () => {
     let actual = validation.validate(state);
-    let expected = {"achievedPoints": undefined, "endDate": undefined, "name": undefined, "startDate": undefined, "targetedPoints": undefined, "mood": undefined};
+    let expected = {'achievedPoints': undefined, 'endDate': undefined, 'name': undefined, 'startDate': undefined, 'targetedPoints': undefined, 'mood': undefined};
 
     expect(actual).toEqual(expected);
   });

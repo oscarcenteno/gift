@@ -43,14 +43,14 @@ describe('Waste days validations should validate', () => {
     expect(actual).toEqual(expected);
   });
 
-  it("Waste days max is the team's capacity", () => {
+  it('Waste days max is the team\'s capacity', () => {
     let actual = validations.validate(true, 100, 100.01);
-    let expected = "Waste days max is the team's capacity";
+    let expected = 'Waste days max is the team\'s capacity';
 
     expect(actual).toBe(expected);
   });
 
-  it("Waste days equal to the team's capacity is valid", () => {
+  it('Waste days equal to the team\'s capacity is valid', () => {
     let actual = validations.validate(true, 100, 100);
     let expected = undefined;
 

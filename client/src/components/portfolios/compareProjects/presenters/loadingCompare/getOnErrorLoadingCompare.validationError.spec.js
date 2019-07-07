@@ -2,11 +2,11 @@ import presenters from '../presenters';
 
 describe('View model when loading the compare and there was a validation error', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     let error = { response: { data: { message: 'A validation error' } } };
     viewModel = presenters.getOnErrorLoadingCompare(error);
-  })
+  });
 
   it('should return no data', () => {
     const actual = viewModel.comparison;

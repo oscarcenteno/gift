@@ -2,10 +2,10 @@ import presenters from '../presenters';
 
 describe('View model when the given project id is invalid', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     viewModel = presenters.getInvalidProjectError();
-  })
+  });
 
   it('should show the correct error message', () => {
     const actual = viewModel.errorMessage;

@@ -10,7 +10,7 @@ const validations = {
           error = 'Waste days min is 0';
         if (!isNaN(teamCapacity)) {
           if (wasteDays > teamCapacity)
-            error = "Waste days max is the team's capacity";
+            error = 'Waste days max is the team\'s capacity';
         }
       }
     } else {
@@ -19,6 +19,6 @@ const validations = {
 
     return error;
   }
-}
+};
 
 export default validations;

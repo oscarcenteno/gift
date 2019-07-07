@@ -9,7 +9,7 @@ describe('DashboardView shows critical errors', () => {
     let actual;
 
     it('should render a critical error', () => {
-        viewModel = { errorMessage: 'There was a critical error!' }
+        viewModel = { errorMessage: 'There was a critical error!' };
         actual = renderer.create(<DashboardView viewModel={viewModel} />).toJSON();
 
         expect(actual).toMatchSnapshot();

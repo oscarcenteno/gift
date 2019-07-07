@@ -2,11 +2,11 @@ import presenters from '../presenters';
 
 describe('View model when loading the dashboard and data was not found', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     let response = { data: undefined };
     viewModel = presenters.getOnSuccessLoadingDashboard(response);
-  })
+  });
 
   it('should return no project data', () => {
     const actual = viewModel.project;

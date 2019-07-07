@@ -51,8 +51,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     loadProjects: bindActionCreators(actions.loadProjects, dispatch)
-  }
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectList);
-`                                   `

@@ -5,6 +5,6 @@ const projectService = {
   loadProjects(portfolioId) {
     return axios.get(`${constants.getApi()}/projects/portfolio/${portfolioId}`);
   }
-}
+};
 
 export default projectService;

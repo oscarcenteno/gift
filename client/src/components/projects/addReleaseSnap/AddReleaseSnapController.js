@@ -15,9 +15,9 @@ export default class AddReleaseSnapController extends React.Component {
       onDateChange: this.changeReleaseDate(),
       onClick: this.onSubmit,
       onClose: this.props.onClose
-    }
+    };
 
-    this.state = presenters.getInitial(props, formCallbacks)
+    this.state = presenters.getInitial(props, formCallbacks);
   }
 
   onSubmit(event) {
@@ -40,13 +40,13 @@ export default class AddReleaseSnapController extends React.Component {
 
   changeReleaseDate() {
     return (newValue) => {
-      const newViewModel = presenters.getOnDateChange(newValue, this.state)
+      const newViewModel = presenters.getOnDateChange(newValue, this.state);
       this.setState(newViewModel);
-    }
+    };
   }
 
   render() {
-    return (<AddReleaseSnapView viewModel={this.state} />)
+    return (<AddReleaseSnapView viewModel={this.state} />);
   }
 }
 

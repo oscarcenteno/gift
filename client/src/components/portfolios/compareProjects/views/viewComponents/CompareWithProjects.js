@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from 'grommet/components/Box';
 import Heading from 'grommet/components/Heading';
-import CompareTable from './CompareTable'
+import CompareTable from './CompareTable';
 
 const CompareWithProjects = ({ viewModel }) => {
   const { portfolioName } = viewModel.comparison;
@@ -11,5 +11,5 @@ const CompareWithProjects = ({ viewModel }) => {
       <CompareTable viewModel={viewModel} />
     </Box>
   );
-}
+};
 export default CompareWithProjects;

@@ -12,8 +12,8 @@ const addCycleSnapRequest = {
       isWasteAvailable: viewModel.isWasteAvailable,
       teamCapacity: viewModel.teamCapacity,
       wasteDays: viewModel.wasteDays
-    }
+    };
   }
-}
+};
 
 export default addCycleSnapRequest;

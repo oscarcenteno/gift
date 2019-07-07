@@ -15,12 +15,12 @@ const viewModels = {
             addIncidentsReport: false,
             successNotificationOnAdd: undefined,
             failureNotificationOnAdd: undefined
-        }
+        };
     },
 
     getInvalidProjectError() {
         return {
-            errorMessage: "We are sorry, but your asked with an invalid project id.",
+            errorMessage: 'We are sorry, but your asked with an invalid project id.',
             addCycleSnap: false,
             addReleaseSnap: false,
             addIncidentsReport: false,
@@ -37,7 +37,7 @@ const viewModels = {
             addIncidentsReport: false,
             successNotificationOnAdd: undefined,
             failureNotificationOnAdd: undefined
-        }
+        };
     },
 
     getShowAddReleaseSnapForm() {
@@ -48,7 +48,7 @@ const viewModels = {
             addIncidentsReport: false,
             successNotificationOnAdd: undefined,
             failureNotificationOnAdd: undefined
-        }
+        };
     },
 
     getShowAddIncidentsReportForm() {
@@ -59,7 +59,7 @@ const viewModels = {
             addIncidentsReport: true,
             successNotificationOnAdd: undefined,
             failureNotificationOnAdd: undefined
-        }
+        };
     },
 
     getForClosingForms() {
@@ -70,7 +70,7 @@ const viewModels = {
             addIncidentsReport: false,
             successNotificationOnAdd: undefined,
             failureNotificationOnAdd: undefined
-        }
+        };
     },
 
     getSuccessOnAddingACycleSnap() {
@@ -81,7 +81,7 @@ const viewModels = {
             addIncidentsReport: false,
             successNotificationOnAdd: 'Success! You just added a new cycle snap.',
             failureNotificationOnAdd: undefined
-        }
+        };
     },
 
     getSuccessOnAddingAReleaseSnap() {
@@ -92,7 +92,7 @@ const viewModels = {
             addIncidentsReport: false,
             successNotificationOnAdd: 'Success! You just added a new release snap.',
             failureNotificationOnAdd: undefined
-        }
+        };
     },
 
     getSuccessOnAddingAnIncidentReport() {
@@ -103,7 +103,7 @@ const viewModels = {
             addIncidentsReport: false,
             successNotificationOnAdd: 'Success! You just added a new incidents report.',
             failureNotificationOnAdd: undefined
-        }
+        };
     },
 
     getOnErrorAddingACycleSnap(error) {
@@ -116,7 +116,7 @@ const viewModels = {
                 addIncidentsReport: false,
                 successNotificationOnAdd: undefined,
                 failureNotificationOnAdd: 'Sorry, there was a validation error: ' + error.response.data.message + '.'
-            }
+            };
         }
         else {
             // There was a critical error.
@@ -127,7 +127,7 @@ const viewModels = {
                 addReleaseSnap: false,
                 addCycleSnap: false,
                 addIncidentsReport: false
-            }
+            };
         }
     },
 
@@ -141,7 +141,7 @@ const viewModels = {
                 addReleaseSnap: false,
                 addCycleSnap: false,
                 addIncidentsReport: false
-            }
+            };
         }
         else {
             // There was a critical error.
@@ -152,7 +152,7 @@ const viewModels = {
                 addReleaseSnap: false,
                 addCycleSnap: false,
                 addIncidentsReport: false
-            }
+            };
         }
     },
 
@@ -166,7 +166,7 @@ const viewModels = {
                 addReleaseSnap: false,
                 addCycleSnap: false,
                 addIncidentsReport: false
-            }
+            };
         }
         else {
             // There was a critical error.
@@ -177,7 +177,7 @@ const viewModels = {
                 addReleaseSnap: false,
                 addCycleSnap: false,
                 addIncidentsReport: false
-            }
+            };
         }
     },
 
@@ -220,6 +220,6 @@ const viewModels = {
             };
         }
     }
-}
+};
 
 export default viewModels;

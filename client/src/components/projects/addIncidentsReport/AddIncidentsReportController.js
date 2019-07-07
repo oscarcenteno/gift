@@ -16,9 +16,9 @@ export default class AddIncidentsReportController extends React.Component {
       onTotalIncidentsChange: this.changeTotalIncidents(),
       onClick: this.onSubmit,
       onClose: this.props.onClose
-    }
+    };
 
-    this.state = presenters.getInitial(props, formCallbacks)
+    this.state = presenters.getInitial(props, formCallbacks);
   }
 
   changeReportDate() {
@@ -30,7 +30,7 @@ export default class AddIncidentsReportController extends React.Component {
 
   changeTotalIncidents() {
     return (event) => {
-      const newViewModel = presenters.getOnTotalIncidentsChange(event, this.state)
+      const newViewModel = presenters.getOnTotalIncidentsChange(event, this.state);
       this.setState(newViewModel);
     };
   }
@@ -53,7 +53,7 @@ export default class AddIncidentsReportController extends React.Component {
   }
 
   render() {
-    return (<AddIncidentsReportView viewModel={this.state} />)
+    return (<AddIncidentsReportView viewModel={this.state} />);
   }
 }
 

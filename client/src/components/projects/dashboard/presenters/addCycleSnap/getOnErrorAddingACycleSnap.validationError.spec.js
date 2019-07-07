@@ -2,11 +2,11 @@ import presenters from '../presenters';
 
 describe('View model when there is a validation error adding a cycle snap', () => {
 
-  let viewModelForValidationError
+  let viewModelForValidationError;
   beforeEach(() => {
     let validationError = { response: { data: { message: 'Points are required' } } };
     viewModelForValidationError = presenters.getOnErrorAddingACycleSnap(validationError);
-  })
+  });
 
   it('If there was a validation error, it should show a failure notification', () => {
     const actual = viewModelForValidationError.failureNotificationOnAdd;

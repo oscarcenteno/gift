@@ -1,13 +1,13 @@
 import presenters from './presenters';
 
 describe('presenters.getOnWasteIsAvailableChange', () => {
-    let viewModel
+    let viewModel;
 
     beforeEach(() => {
         const event = { target: {checked: true}};
-        const currentViewModel ={ errors: { teamCapacity: 'Waste is invalid', wasteDays: 'Waste days is invalid' }};
+        const currentViewModel = { errors: { teamCapacity: 'Waste is invalid', wasteDays: 'Waste days is invalid' }};
         viewModel = presenters.getOnWasteIsAvailableChange(event, currentViewModel);
-    })
+    });
 
     it('it should set team capacity to 0', () => {
         const actual = viewModel.teamCapacity;

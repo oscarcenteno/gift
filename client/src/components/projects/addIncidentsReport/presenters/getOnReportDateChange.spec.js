@@ -2,7 +2,7 @@ import presenters from './presenters';
 
 describe('presenters.getOnReportDateChange', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     const currentViewModel = {
       errors: { reportDate: undefined },
@@ -10,7 +10,7 @@ describe('presenters.getOnReportDateChange', () => {
     };
     viewModel = presenters.getOnReportDateChange(' ', currentViewModel);
 
-  })
+  });
 
   it('Should set the new value', () => {
     const actual = viewModel.reportDate;

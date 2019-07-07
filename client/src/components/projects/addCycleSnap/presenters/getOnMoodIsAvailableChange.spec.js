@@ -2,7 +2,7 @@ import presenters from './presenters';
 
 describe('presenters.getOnMoodIsAvailableChange', () => {
 
-    let viewModel
+    let viewModel;
     beforeEach(() => {
         const event = { target: { checked: true } };
         const currentViewModel = {
@@ -11,7 +11,7 @@ describe('presenters.getOnMoodIsAvailableChange', () => {
             isMoodAvailable: true
         };
         viewModel = presenters.getOnMoodIsAvailableChange(event, currentViewModel);
-    })
+    });
 
     it('It should set mood to 0', () => {
         const actual = viewModel.mood;

@@ -2,12 +2,12 @@ import presenters from './presenters';
 
 describe('presenters.getInitial', () => {
 
-  let viewModel
+  let viewModel;
   beforeEach(() => {
     let props = { projectId: 999, projectName: 'Exceptional' };
     let formCallbacks = {};
     viewModel = presenters.getInitial(props, formCallbacks);
-  })
+  });
 
   it('should contain the project id', () => {
     const actual = viewModel.projectId;

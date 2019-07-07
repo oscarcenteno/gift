@@ -7,8 +7,8 @@ import DashboardWithNoCycleSnaps from './viewComponents/DashboardWithNoCycleSnap
 import DashboardWithCycleSnaps from './viewComponents/DashboardWithCycleSnaps';
 
 import AddCycleSnapController from '../../addCycleSnap/AddCycleSnapController';
-import AddReleaseSnapController from "../../addReleaseSnap/AddReleaseSnapController";
-import AddIncidentsReportController from "../../addIncidentsReport/AddIncidentsReportController";
+import AddReleaseSnapController from '../../addReleaseSnap/AddReleaseSnapController';
+import AddIncidentsReportController from '../../addIncidentsReport/AddIncidentsReportController';
 
 const DashboardView = ({viewModel}) => {
   const {errorMessage} = viewModel;
@@ -29,7 +29,7 @@ const DashboardView = ({viewModel}) => {
     else
       return (<LoadingView/>);
   }
-}
+};
 
 /* Determines the UI elements that will be shown: 
   - success notification after adding a cycle snap 
@@ -83,6 +83,6 @@ const determineElements = (viewModel) => {
   }
 
   return elements;
-}
+};
 
 export default DashboardView;

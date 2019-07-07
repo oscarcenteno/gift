@@ -2,14 +2,14 @@ import presenters from './presenters';
 
 describe('presenters.getInitial', () => {
 
-  let dashboardCallbacks
-  let viewModel
+  let dashboardCallbacks;
+  let viewModel;
 
   beforeEach(() => {
     let props = { params: { id: 999 } };
     dashboardCallbacks = {};
     viewModel = presenters.getInitial(props, dashboardCallbacks);
-  })
+  });
 
   it('should contain the project id', () => {
     const actual = viewModel.projectId;
@@ -27,7 +27,7 @@ describe('presenters.getInitial', () => {
 
   it('should contain given callbacks', () => {
     const actual = viewModel.dashboardCallbacks;
-    const expected = dashboardCallbacks
+    const expected = dashboardCallbacks;
 
     expect(actual).toEqual(expected);
   });

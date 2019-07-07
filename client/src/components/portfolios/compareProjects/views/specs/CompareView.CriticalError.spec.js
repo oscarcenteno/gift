@@ -8,7 +8,7 @@ describe('CompareView shows critical errors', () => {
   let actual;
 
   it('should render a critical error', () => {
-    viewModel = { errorMessage: 'There was a critical error!' }
+    viewModel = { errorMessage: 'There was a critical error!' };
     actual = renderer.create(<CompareView viewModel={viewModel} />).toJSON();
 
     expect(actual).toMatchSnapshot();

@@ -124,11 +124,11 @@ const presenters = {
     // Get state
     let newValue = event.target.valueAsNumber;
     let {errors} = currentViewModel;
-    const {isMoodAvailable} = currentViewModel
+    const {isMoodAvailable} = currentViewModel;
 
     //Validate
     let withTwoDecimals = Math.round(newValue * 100) / 100;
-    errors.mood = moodValidations.validate(isMoodAvailable, withTwoDecimals)
+    errors.mood = moodValidations.validate(isMoodAvailable, withTwoDecimals);
 
     return {errors: errors, mood: withTwoDecimals};
   },
@@ -141,7 +141,7 @@ const presenters = {
 
     //Validate
     const withTwoDecimals = Math.round(newTeamCapacity * 100) / 100;
-    errors.teamCapacity = teamCapacityValidations.validate(isWasteAvailable, withTwoDecimals)
+    errors.teamCapacity = teamCapacityValidations.validate(isWasteAvailable, withTwoDecimals);
 
     return {errors: errors, teamCapacity: withTwoDecimals};
   },
@@ -170,10 +170,10 @@ const presenters = {
       submitRequest(request);
     }
     else {
-      const newViewModel = {errors: errors}
+      const newViewModel = {errors: errors};
       updateViewModel(newViewModel);
     }
   }
-}
+};
 
 export default presenters;

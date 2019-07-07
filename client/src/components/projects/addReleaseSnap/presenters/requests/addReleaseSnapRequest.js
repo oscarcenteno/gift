@@ -4,8 +4,8 @@ const addReleaseSnapRequest = {
       projectId: viewModel.projectId,
       releaseName: viewModel.releaseName,
       releaseDate: viewModel.releaseDate
-    }
+    };
   }
-}
+};
 
 export default addReleaseSnapRequest;
