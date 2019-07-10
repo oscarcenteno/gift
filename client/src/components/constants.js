@@ -21,7 +21,7 @@ export const constants = {
         api = 'http://criprj:11010/api/v1'; // testing
         break;
       default:
-        api = 'http://gift-demo.herokuapp.com/api/v1'; // cloud
+        api = 'https://gift-demo.herokuapp.com/api/v1'; // cloud
     }
     return api;
   }

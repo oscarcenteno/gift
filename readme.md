@@ -66,3 +66,23 @@ This will:
 1. Install client dependencies and run unit tests
 2. Compile the server and run the unit tests
 3. Validate the database migratons in a H2 database (in-memory)
+
+## Deploy App to Heroku
+
+### Configure CLI
+
+Install Heroku CLI and login: <https://devcenter.heroku.com/articles/heroku-cli#download-and-install>
+
+`heroku login`
+
+### Deploy with gradle
+
+First make sure to compile the client and the server (npm run build, gradle build).
+
+Then, deploy to heroku. We use this plugin: <https://github.com/heroku/heroku-gradle>
+
+`gradle :cloud:deployHeroku`
+
+## Deploy database to the cloud service
+
+`gradle :cloud:flywayMigrate`

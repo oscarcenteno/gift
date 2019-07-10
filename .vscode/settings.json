@@ -10,6 +10,16 @@
       "port": 3306,
       "server": "127.0.0.1",
       "username": "root"
+    },
+    {
+      "connectionTimeout": 30,
+      "database": "heroku_3b918570b207066",
+      "dialect": "MySQL",
+      "name": "gift-cloud",
+      "password": "77902b2a",
+      "port": 3306,
+      "server": "us-cdbr-iron-east-05.cleardb.net",
+      "username": "b0cf08670721fb"
     }
   ],
   "editor.formatOnSave": true,
